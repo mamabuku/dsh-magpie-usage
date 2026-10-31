@@ -11,6 +11,8 @@
 | i18n（`const I18N = { zh: … }` 等，键=英文原文） | 35760128–37682165 | `docs/reference/magpie-i18n-zh.json`（用量相关 1176 对，非全表） |
 | Go 源码 main 包（`windowHolds` 等，明文注释） | ≈25631115–26270000 一带 | 见下文逐条引用 |
 
+> **注意**：`docs/reference/` 下的原始提取文件（约 1.8MB，第三方代码）**不随仓库分发**（见 `.gitignore`），此处只保留分析结论与短引用；需要原文请用你本机的 Magpie 按同法提取（`scripts/extract-magpie-icons.mjs` 可作示例）。
+
 下文 offset 一律指**原始二进制**中的偏移。所有结论均可对照上述文件 grep 复核。
 
 ---
