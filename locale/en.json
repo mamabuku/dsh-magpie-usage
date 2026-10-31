@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Magpie quota",
+    "description": "Quotas, balances and usage for every account your local Magpie gateway knows: its own Settings column, plus optional composer, bottom-bar and floating-orb surfaces. Read-only; signs in to nothing."
+  }
+}

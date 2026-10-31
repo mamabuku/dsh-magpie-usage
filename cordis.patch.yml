@@ -1,0 +1,4 @@
+# Mount the Magpie usage bundle. Host routes live in ./index.js.
+- insert:
+    - id: dsh-magpie-usage
+      name: 'dsh-magpie-usage'

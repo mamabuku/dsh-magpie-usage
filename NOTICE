@@ -1,0 +1,21 @@
+NOTICE
+
+本仓库（dsh-magpie-usage）包含的文件分两部分说明：
+
+1. 本仓库自身代码
+   版权所有 (c) 2026 汪瓅，依 LICENSE（MIT）授权。
+
+2. assets/icons/*.svg（第三方商标）
+   这些 SVG 图标提取自用户本机安装的 Magpie 应用
+   （/Applications/magpie.app，Go + Wails，前端资源内嵌于其二进制），
+   提取脚本为 scripts/extract-magpie-icons.mjs（只读本机文件，不联网）。
+   用途仅为在本机 DSH 面板中「识别对应的模型服务商」。
+
+   codex、cline、factory、deepseek、zcode、zhipu 等名称与图标均为
+   相应厂商的商标或注册商标，归其各自所有者所有。本仓库对它们
+   不主张任何权利；提取与分发仅服务本地识别目的，不代表这些厂商
+   与本项目有任何关联或背书。
+
+   除上述图标外，本仓库不包含、不复制 Magpie 应用的任何本体代码
+   或其资产的其他部分；docs/MAGPIE-SPEC.md 中对 Magpie 行为的描述
+   是独立撰写的技术笔记，不是 Magpie 源码的再分发。

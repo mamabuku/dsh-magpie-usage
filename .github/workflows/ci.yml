@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# 同一分支的新提交取消还在跑的旧运行
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # 仓库零运行时依赖，保留 install 以便未来加依赖时 CI 不漏。
+      # 注意：刻意不跑 `npm run audit` —— 它要求本机 Magpie 网关在
+      # 127.0.0.1:3425 可达，CI 环境没有 Magpie，必失败。发布前在本机跑。
+      - name: Install
+        run: npm install --no-audit --no-fund
+
+      - name: Build client bundle
+        run: npm run build:client
+
+      - name: Check client bundle
+        run: npm run check:client
+
+      - name: Tests
+        run: npm test

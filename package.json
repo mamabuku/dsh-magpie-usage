@@ -1,0 +1,76 @@
+{
+  "name": "dsh-magpie-usage",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Magpie 额度：把本机 Magpie 网关的账号额度/余额/用量，以三种承载位（输入框/底边栏/悬浮球）+ 设置独立一列呈现。只读、无登录、无依赖。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs/*.md",
+    "docs/*.png",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build:client": "node scripts/build-client.mjs",
+    "check:client": "node scripts/check-client.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "smoke": "node scripts/smoke-server.mjs",
+    "audit": "node scripts/audit-data.mjs",
+    "icons": "node scripts/extract-magpie-icons.mjs",
+    "install": "node scripts/install.mjs",
+    "uninstall": "node scripts/uninstall.mjs",
+    "prepublishOnly": "node scripts/build-client.mjs && node scripts/check-client.mjs"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "汪瓅"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "magpie",
+    "quota",
+    "usage",
+    "balance"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mamabuku/dsh-magpie-usage.git"
+  },
+  "homepage": "https://github.com/mamabuku/dsh-magpie-usage#readme",
+  "bugs": {
+    "url": "https://github.com/mamabuku/dsh-magpie-usage/issues"
+  }
+}

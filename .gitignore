@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+*.log
+.env
+*.bak-*
+.idea/
+.vscode/
+
+# 截图必须进仓库当 README 配图（上游 default-workspace/.gitignore 有 *.png）
+!docs/preview-*.png
+
+# 从本机 Magpie 二进制提取的原始前端源码（1.7MB，第三方版权，不入库不进包）。
+# 分析方法与结论保留在 docs/MAGPIE-SPEC.md；需要原文请用本机 Magpie 自行提取。
+docs/reference/

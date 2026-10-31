@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Magpie 额度">
+  <!-- Original mark: a stylised magpie head over a quota bar. -->
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#1f6feb"/>
+  <path d="M20 40c0-9 6-16 15-16 6 0 11 3 13 8l-6 2c-1-3-4-5-7-5-5 0-8 4-8 9 0 2 1 4 2 5l-5 4c-3-2-4-4-4-7z" fill="#ffffff"/>
+  <path d="M41 24l11-5-7 9z" fill="#9ecbff"/>
+  <rect x="16" y="46" width="32" height="5" rx="2.5" fill="#ffffff" opacity="0.45"/>
+  <rect x="16" y="46" width="19" height="5" rx="2.5" fill="#ffffff"/>
+</svg>
